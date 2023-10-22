@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "start": "nodemon server/index.mjs"
+    "start": "cd client && npm start",
+    "build": "cd client && npm build",
+    "test": "cd client && npm test",
+    "eject": "cd client && npm eject"
   },
   "keywords": [],
   "author": "",
