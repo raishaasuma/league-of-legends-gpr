@@ -28,6 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "type": "module",
   "proxy": "https://3uca8g8ct0.execute-api.us-west-1.amazonaws.com",
   "eslintConfig": {
     "extends": [

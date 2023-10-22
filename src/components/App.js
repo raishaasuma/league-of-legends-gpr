@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AllTeamRankings from "../routes/AllTeamRankings";
-import SelectTeamRankings from "../routes/SelectTeamRankings";
-import TournamentTeamRankings from "../routes/TournamentTeamRankings";
-import TeamInfo from "../routes/TeamInfo";
-import Navbar from "./Navbar";
+import AllTeamRankings from "../routes/AllTeamRankings.jsx";
+import SelectTeamRankings from "../routes/SelectTeamRankings.jsx";
+import TournamentTeamRankings from "../routes/TournamentTeamRankings.jsx";
+import TeamInfo from "../routes/TeamInfo.jsx";
+import Navbar from "./Navbar.js";
 import '../styles/App.sass'
 
 function App() {
