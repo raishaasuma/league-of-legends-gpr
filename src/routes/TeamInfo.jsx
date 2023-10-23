@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 
+const API_URL = process.env.REACT_APP_API_URL + "/teams";
+
+
 function TeamInfo() {
     const [team, setTeam] = useState('');
     const { id } = useParams();
 
     useEffect(() => {
-        fetch("/teams/" + id)
+        fetch(API_URL + id, { mode: 'cors' })
             .then((res) => res.json())
             .then((teamObj) => {
                 setTeam(teamObj)

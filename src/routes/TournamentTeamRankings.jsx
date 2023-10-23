@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import '../styles/App.sass'
 
+const API_URL = process.env.REACT_APP_API_URL + "/teams";
 
 function TournamentTeamRankings() {
     const [teams, setTeams] = useState([]);
@@ -9,7 +10,7 @@ function TournamentTeamRankings() {
     //const [isSelectedTournament, setSelectedTournament] = useState('');
 
     useEffect(() => {
-        fetch("/teams")
+        fetch(API_URL, { mode: 'cors' })
             .then((res) => res.json())
             .then((teams) => {
                 setTeams(teams)
