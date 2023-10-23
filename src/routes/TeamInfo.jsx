@@ -8,8 +8,10 @@ function TeamInfo() {
     const [team, setTeam] = useState('');
     const { id } = useParams();
 
+
+
     useEffect(() => {
-        fetch(API_URL + id, { mode: 'cors' })
+        fetch(API_URL + "/" + id, { mode: 'cors' })
             .then((res) => res.json())
             .then((teamObj) => {
                 setTeam(teamObj)

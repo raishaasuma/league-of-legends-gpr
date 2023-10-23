@@ -52,9 +52,19 @@ function SelectTeamRankings() {
     }
 
     function handleClearTeams() {
+        console.log("clicked");
+
         setTeams(teams => [...teams, ...selectedTeams]);
         setSelectedTeams([]);
         setFilteredTeams(filteredTeams => [...filteredTeams, ...selectedTeams])
+    }
+
+    function runTeamRankSelected() {
+        const sortedTeams = selectedTeams.sort(function (a, b) {
+            return a.rank - b.rank;
+        });
+        console.log(sortedTeams);
+        setSelectedTeams([...sortedTeams]);
     }
 
     //Show all teams
@@ -95,7 +105,7 @@ function SelectTeamRankings() {
                             </button>
                         </div>
                         <div className="col-6">
-                            <button className="btn run-button">
+                            <button onClick={() => runTeamRankSelected()} className="btn run-button">
                                 Run
                             </button>
                         </div>
