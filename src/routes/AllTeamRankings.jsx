@@ -33,7 +33,9 @@ function AllTeamRankings() {
         team.slug.toLowerCase().includes("ljl_summer_2023")
     ));
 
-    const teamsRanked = currentTeamRankings.map((team, index) =>
+    const teamsRanked = currentTeamRankings.sort(function (a, b) {
+        return a.rank - b.rank;
+    }).map((team, index) =>
         <Link className="row team-item" key={team.id} to={`/teamInfo/${team.id}`}>
             <div className="team-rank col-2">{team.rank}</div>
             <div className="team-logo col-2">
@@ -52,7 +54,9 @@ function AllTeamRankings() {
                     value={teamname}
                     onChange={handleInputChange}
                     placeholder='Type to search' />
-                {teamsRanked}
+                <div className="team-list">
+                    {teamsRanked}
+                </div>
             </div>
         </div >
     );
