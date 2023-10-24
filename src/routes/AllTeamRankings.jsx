@@ -36,7 +36,7 @@ function AllTeamRankings() {
     const teamsRanked = currentTeamRankings.sort(function (a, b) {
         return a.rank - b.rank;
     }).map((team, index) =>
-        <Link className="row team-item" key={team.id} to={`/teamInfo/${team.id}`}>
+        <Link className="row team-item all-team-item" key={team.id} to={`/teamInfo/${team.id}`}>
             <div className="team-rank col-2">{team.rank}</div>
             <div className="team-logo col-2">
                 <img className="logo" src="https://am-a.akamaihd.net/image?resize=140:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1631820065346_cloud9-2021-worlds.png" alt="" />

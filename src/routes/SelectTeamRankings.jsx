@@ -1,6 +1,4 @@
 import { React, useState, useEffect } from "react";
-import '../styles/Navbar.sass';
-import '../styles/App.sass'
 
 const API_URL = process.env.REACT_APP_API_URL + "/teams";
 

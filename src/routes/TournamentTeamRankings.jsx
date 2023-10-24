@@ -46,7 +46,9 @@ function TournamentTeamRankings() {
 
     const currentTeamRankings = filteredTeams.filter((team =>
         team.slug.toLowerCase().includes(tournament)
-    ));
+    )).sort(function (a, b) {
+        return a.rank - b.rank;
+    });
 
     const teamsRanked = currentTeamRankings.map((team, index) =>
         <div className="team-item row" key={team.team_name}>
