@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import '../styles/App.sass'
 
 
@@ -14,13 +14,13 @@ export default class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav" id="navbarNav">
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/all-team-rankings">All Team Rankings</Link>
+                            <NavLink className="nav-link text-white" to="/all-team-rankings">All Team Rankings</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/select-team-rankings" >Select Team Ranking</Link>
+                            <NavLink className="nav-link text-white" to="/select-team-rankings" >Select Team Ranking</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/tournament-team-rankings">Tournament Team Rankings</Link>
+                            <NavLink className="nav-link text-white" to="/tournament-team-rankings">Tournament Team Rankings</NavLink>
                         </li>
                     </ul>
                 </div>

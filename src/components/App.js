@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import AllTeamRankings from "../routes/AllTeamRankings.jsx";
 import SelectTeamRankings from "../routes/SelectTeamRankings.jsx";
 import TournamentTeamRankings from "../routes/TournamentTeamRankings.jsx";
@@ -14,6 +14,10 @@ function App() {
       <main className="App">
         <Navbar />
         <Routes>
+          <Route
+            path="/"
+            element={<Navigate to="/all-team-rankings" />}
+          />
           <Route path="/all-team-rankings" element={<AllTeamRankings />}></Route>
           <Route path="/select-team-rankings" element={<SelectTeamRankings />}></Route>
           <Route path="/tournament-team-rankings" element={<TournamentTeamRankings />}></Route>

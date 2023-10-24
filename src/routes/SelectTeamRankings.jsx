@@ -61,7 +61,6 @@ function SelectTeamRankings() {
         const sortedTeams = selectedTeams.sort(function (a, b) {
             return a.rank - b.rank;
         });
-        console.log(sortedTeams);
         setSelectedTeams([...sortedTeams]);
     }
 
@@ -78,8 +77,9 @@ function SelectTeamRankings() {
     //Show selected teams
     const teamsSelected = selectedTeams.map((team, index) =>
         <div className="team-selector row" key={team.id}>
-            <div className="col-6">{team.team_name}</div>
-            <div className="col-6">
+            <div className="col-2">{team.rank}</div>
+            <div className="col-8">{team.team_name}</div>
+            <div className="col-2">
                 <button className="btn remove-button" onClick={() => handleRemoveTeam(team)}>Remove</button>
             </div>
         </div>
